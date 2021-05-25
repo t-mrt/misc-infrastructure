@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+Object {
+  "Resources": Object {
+    "Bucket83908E77": Object {
+      "DeletionPolicy": "Retain",
+      "Properties": Object {
+        "BucketName": "trivial-backup-02",
+        "PublicAccessBlockConfiguration": Object {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true,
+        },
+        "VersioningConfiguration": Object {
+          "Status": "Enabled",
+        },
+      },
+      "Type": "AWS::S3::Bucket",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "BucketPolicyE9A3008A": Object {
+      "Properties": Object {
+        "Bucket": Object {
+          "Ref": "Bucket83908E77",
+        },
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "s3:PutObject",
+              "Effect": "Allow",
+              "Principal": Object {
+                "AWS": Object {
+                  "Fn::GetAtt": Array [
+                    "User00B015A1",
+                    "Arn",
+                  ],
+                },
+              },
+              "Resource": Object {
+                "Fn::Join": Array [
+                  "",
+                  Array [
+                    Object {
+                      "Fn::GetAtt": Array [
+                        "Bucket83908E77",
+                        "Arn",
+                      ],
+                    },
+                    "/*",
+                  ],
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::S3::BucketPolicy",
+    },
+    "User00B015A1": Object {
+      "Properties": Object {
+        "UserName": "trivial_backup",
+      },
+      "Type": "AWS::IAM::User",
+    },
+  },
+}
+`;

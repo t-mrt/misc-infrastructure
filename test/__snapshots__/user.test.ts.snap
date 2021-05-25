@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+Object {
+  "Resources": Object {
+    "GeneralPurposeUser8600AB08": Object {
+      "Properties": Object {
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/AdministratorAccess",
+              ],
+            ],
+          },
+        ],
+        "UserName": "t_",
+      },
+      "Type": "AWS::IAM::User",
+    },
+  },
+}
+`;
