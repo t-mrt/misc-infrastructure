@@ -7,6 +7,21 @@ export class UserStack extends cdk.Stack {
     const user = new iam.User(this, 'GeneralPurposeUser', {
       userName: "t_"
     });
-    user.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName("AdministratorAccess"))
+
+    const role = new iam.Role(this, 'PowerUserRole', {
+      assumedBy: new iam.ArnPrincipal(user.userArn).withConditions({
+        Bool: {
+          "aws:MultiFactorAuthPresent": "true"
+        },
+      }),
+      roleName: "admin_role",
+    });
+
+    user.addToPolicy(new iam.PolicyStatement({
+      resources: [role.roleArn],
+      actions: ['sts:AssumeRole'],
+    }))
+
+    role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName("AdministratorAccess"))
   }
 }
