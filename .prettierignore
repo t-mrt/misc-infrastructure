@@ -1,0 +1,5 @@
+build
+coverage
+lib/**/*.js
+bin/**/*.js
+test/**/*.js
