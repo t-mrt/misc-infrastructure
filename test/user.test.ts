@@ -1,4 +1,3 @@
-import { expect as expectCDK, matchTemplate, MatchStyle } from "@aws-cdk/assert"
 import * as cdk from "@aws-cdk/core"
 import { SynthUtils } from "@aws-cdk/assert"
 import * as u from "../lib/user"
