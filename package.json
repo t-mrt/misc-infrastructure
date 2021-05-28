@@ -9,14 +9,26 @@
     "watch": "tsc -w",
     "test": "jest",
     "test_with_update": "jest -u",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "lint": "run-s lint:eslint lint:prettier",
+    "lint:eslint": "eslint . --ext '.ts' --format 'node_modules/eslint-friendly-formatter'",
+    "lint:prettier": "prettier . --check",
+    "fix": "run-s fix:eslint fix:prettier",
+    "fix:eslint": "eslint . --ext '.ts' --format 'node_modules/eslint-friendly-formatter' --fix",
+    "fix:prettier": "prettier . --write"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.106.1",
     "@types/jest": "26.0.23",
     "@types/node": "15.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
     "aws-cdk": "1.106.1",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.27.0",
+    "eslint-config-prettier": "8.3.0",
     "jest": "26.6.3",
+    "prettier": "2.3.0",
     "ts-jest": "26.5.6",
     "ts-node": "10.0.0",
     "typescript": "4.3.2"
@@ -25,6 +37,8 @@
     "@aws-cdk/aws-iam": "1.106.1",
     "@aws-cdk/aws-s3": "1.106.1",
     "@aws-cdk/core": "1.106.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "npm-run-all": "^4.1.5",
     "source-map-support": "0.5.19"
   },
   "license": "UNLICENSED",
