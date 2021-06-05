@@ -2,21 +2,20 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
   "dependencyDashboard": true,
+  "automerge": true,
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "automerge": true
+      "groupSlug": "all-minor-patch"
     },
     {
       "groupName": "jest",
       "matchSourceUrlPrefixes": [
         "https://github.com/facebook/jest",
         "https://github.com/kulshekhar/ts-jest"
-      ],
-      "automerge": true
+      ]
     }
   ]
 }
