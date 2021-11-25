@@ -18,31 +18,31 @@
     "fix:prettier": "prettier . --write"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.125.0",
-    "@types/jest": "27.0.2",
+    "@aws-cdk/assert": "1.134.0",
+    "@types/jest": "27.0.3",
     "@types/node": "15.6.1",
-    "@typescript-eslint/eslint-plugin": "4.32.0",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
-    "aws-cdk": "1.125.0",
+    "aws-cdk": "1.134.0",
     "babel-eslint": "10.1.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "jest": "27.0.6",
-    "prettier": "2.4.1",
+    "prettier": "2.5.0",
     "ts-jest": "27.0.5",
-    "ts-node": "10.2.1",
-    "typescript": "4.4.3"
+    "ts-node": "10.4.0",
+    "typescript": "4.5.2"
   },
   "dependencies": {
-    "@aws-cdk/aws-cloudfront": "1.125.0",
-    "@aws-cdk/aws-iam": "1.125.0",
-    "@aws-cdk/aws-route53": "1.125.0",
-    "@aws-cdk/aws-route53-targets": "1.125.0",
-    "@aws-cdk/aws-s3": "1.125.0",
-    "@aws-cdk/core": "1.125.0",
+    "@aws-cdk/aws-cloudfront": "1.134.0",
+    "@aws-cdk/aws-iam": "1.134.0",
+    "@aws-cdk/aws-route53": "1.134.0",
+    "@aws-cdk/aws-route53-targets": "1.134.0",
+    "@aws-cdk/aws-s3": "1.134.0",
+    "@aws-cdk/core": "1.134.0",
     "eslint-friendly-formatter": "4.0.1",
     "npm-run-all": "4.1.5",
-    "source-map-support": "0.5.20"
+    "source-map-support": "0.5.21"
   },
   "license": "UNLICENSED",
   "private": true
